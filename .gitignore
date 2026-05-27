@@ -12,6 +12,10 @@ backend/public/uploads/
 # Prisma generated client
 backend/node_modules/
 
+# SQLite local database
+backend/prisma/dev.db
+backend/prisma/dev.db-journal
+
 # Frontend build output
 frontend/dist/
 frontend/dist-ssr/
