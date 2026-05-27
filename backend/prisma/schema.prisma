@@ -1,0 +1,51 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Inquiry {
+  id          String   @id @default(uuid())
+  name        String
+  phone       String
+  email       String
+  projectType String
+  budget      String
+  message     String
+  date        DateTime @default(now())
+  status      String   @default("unread")
+}
+
+model PortfolioItem {
+  id          String   @id @default(uuid())
+  title       String
+  description String
+  category    String
+  mediaType   String
+  url         String
+  thumbnail   String?
+  tags        String   // comma-separated tags e.g. "Color Grading, Drone, Resolve"
+  before      String?  // Before grade image URL
+  after       String?  // After grade image URL
+  createdAt   DateTime @default(now())
+}
+
+model Service {
+  id          String @id @default(uuid())
+  title       String
+  description String
+  price       Int
+  icon        String
+}
+
+model Testimonial {
+  id      String @id @default(uuid())
+  name    String
+  role    String
+  avatar  String
+  rating  Int
+  comment String
+}

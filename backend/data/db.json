@@ -1,0 +1,184 @@
+{
+  "portfolio": [
+    {
+      "id": "p1",
+      "title": "Lost in Tokyo - Cinematic Travel",
+      "description": "A visually rich cinematic journey capturing the night lights and neon streets of Tokyo. Focused on dynamic grading and sound design.",
+      "category": "Cinematic",
+      "mediaType": "video",
+      "url": "https://www.youtube.com/embed/5F_C2W16JkU",
+      "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deceeaf7?auto=format&fit=crop&w=1200&q=80",
+      "beforeAfter": {
+        "before": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=600&q=80&sat=-50",
+        "after": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=600&q=80"
+      },
+      "tags": [
+        "Color Grading",
+        "Sound Design",
+        "DaVinci Resolve"
+      ]
+    },
+    {
+      "id": "p2",
+      "title": "Cyberpunk Street Photography",
+      "description": "High-contrast urban portrait shots under heavy rain and neon billboards. Edited in Adobe Lightroom.",
+      "category": "Photography",
+      "mediaType": "image",
+      "url": "https://images.unsplash.com/photo-1515621061946-eff1c2a352bd?auto=format&fit=crop&w=1200&q=80",
+      "thumbnail": "https://images.unsplash.com/photo-1515621061946-eff1c2a352bd?auto=format&fit=crop&w=600&q=80",
+      "tags": [
+        "Portrait",
+        "Lightroom",
+        "Night Shoot"
+      ]
+    },
+    {
+      "id": "p3",
+      "title": "Speed & Motion - Sports Reel",
+      "description": "Fast-paced Instagram reel edit for a premium automotive brand. Highlighted by speed ramps and whip pans.",
+      "category": "Reels",
+      "mediaType": "video",
+      "url": "https://www.youtube.com/embed/2M-J3zCee14",
+      "thumbnail": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1200&q=80",
+      "tags": [
+        "Reel Editing",
+        "Premiere Pro",
+        "Speed Ramps"
+      ]
+    },
+    {
+      "id": "p4",
+      "title": "Mountain Escape - Commercial Shoot",
+      "description": "Outdoor commercial advertisement editing combining drone footage with close-up product highlights.",
+      "category": "Video Editing",
+      "mediaType": "video",
+      "url": "https://www.youtube.com/embed/ScMzIvxBSi4",
+      "thumbnail": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+      "tags": [
+        "Drone",
+        "Premiere Pro",
+        "Commercial"
+      ]
+    },
+    {
+      "id": "p5",
+      "title": "Ethereal Forest Portals",
+      "description": "A fantasy photography series exploring double-exposure and color isolation.",
+      "category": "Photography",
+      "mediaType": "image",
+      "url": "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80",
+      "thumbnail": "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=600&q=80",
+      "tags": [
+        "Creative",
+        "Photoshop",
+        "Landscape"
+      ]
+    },
+    {
+      "id": "p6",
+      "title": "Neon Dreams - Corporate Event Gala",
+      "description": "Dynamic coverage of an electronic music gala, mixing fast transitions with low-light cinematic photography.",
+      "category": "Events",
+      "mediaType": "image",
+      "url": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=80",
+      "thumbnail": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=80",
+      "tags": [
+        "Event",
+        "Low Light",
+        "Color Correction"
+      ]
+    }
+  ],
+  "services": [
+    {
+      "id": "s1",
+      "title": "Reel & Short-Form Editing",
+      "description": "High-retention vertical videos optimized for TikTok, Instagram Reels, and YouTube Shorts. Incorporates dynamic captions, SFX, and pacing.",
+      "price": 150,
+      "icon": "Smartphone"
+    },
+    {
+      "id": "s2",
+      "title": "Cinematic Wedding & Event Edits",
+      "description": "Emotional, color-graded wedding films capturing every memorable detail. Includes drone sequence rendering and premium sound design.",
+      "price": 800,
+      "icon": "Film"
+    },
+    {
+      "id": "s3",
+      "title": "Commercial & Promo Videos",
+      "description": "Sleek, advertising-grade commercial edits built to command attention. Includes script consulting, voiceover sync, and sound FX design.",
+      "price": 1200,
+      "icon": "Tv"
+    },
+    {
+      "id": "s4",
+      "title": "Cinematic Photography Shoots",
+      "description": "Professional high-end photoshoots including urban portraits, lifestyle modeling, travel documentation, or automotive features.",
+      "price": 450,
+      "icon": "Camera"
+    },
+    {
+      "id": "s5",
+      "title": "Advanced Color Grading",
+      "description": "Transform raw log footage (S-Log, D-Log, REDCODE) into professional-grade cinematic color spaces using DaVinci Resolve.",
+      "price": 300,
+      "icon": "Sliders"
+    },
+    {
+      "id": "s6",
+      "title": "Viral YouTube Thumbnail Design",
+      "description": "Eye-catching, high-CTR YouTube thumbnails styled specifically to drive traffic and increase audience engagement.",
+      "price": 80,
+      "icon": "Layout"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "t1",
+      "name": "Marcus Vance",
+      "role": "Creative Director at NeonMedia",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80",
+      "rating": 5,
+      "comment": "Working on our commercial was effortless. Navneet took our messy raw logs and turned them into a cinematic masterpiece. The sound design is top-tier!"
+    },
+    {
+      "id": "t2",
+      "name": "Sarah Sterling",
+      "role": "Lifestyle Content Creator",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80",
+      "rating": 5,
+      "comment": "My Instagram Reels retention shot up by 40% after letting Navneet handle the edits. The pacing, sound effects, and captions are exactly what I needed."
+    },
+    {
+      "id": "t3",
+      "name": "David & Emily",
+      "role": "Wedding Clients",
+      "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80",
+      "rating": 5,
+      "comment": "The wedding highlight video still makes us tear up. It feels like an actual movie rather than just a wedding video. Cannot recommend enough!"
+    }
+  ],
+  "inquiries": [
+    {
+      "id": "inq1",
+      "name": "Alex Rivera",
+      "email": "alex@riverafilms.com",
+      "projectType": "Commercial Video",
+      "budget": "$1000 - $2500",
+      "message": "Hey! We are launching a new fitness product and need a 30-second punchy cinematic commercial with professional grading and SFX. Let me know your availability.",
+      "date": "2026-05-26T14:32:00Z",
+      "status": "unread"
+    },
+    {
+      "id": "inq2",
+      "name": "Helena Rostova",
+      "email": "helena.rostova@gmail.com",
+      "projectType": "Photography Shoot",
+      "budget": "$500 - $1000",
+      "message": "Looking for an outdoor portrait photographer in downtown area next month. I want a cyber/futuristic vibe with neon lights.",
+      "date": "2026-05-27T08:15:00Z",
+      "status": "read"
+    }
+  ]
+}
