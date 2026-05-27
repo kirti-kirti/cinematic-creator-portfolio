@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, MessageSquare, Instagram, ExternalLink } from 'lucide-react';
 import confetti from 'canvas-confetti';
+import { apiUrl } from '../api.js';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -45,7 +46,7 @@ export default function Contact() {
     setStatus(null);
 
     try {
-      const res = await fetch('/api/inquiries', {
+      const res = await fetch(apiUrl('/api/inquiries'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
@@ -108,7 +109,7 @@ export default function Contact() {
 
     try {
       // 1. Submit to database in the background
-      const res = await fetch('/api/inquiries', {
+      const res = await fetch(apiUrl('/api/inquiries'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

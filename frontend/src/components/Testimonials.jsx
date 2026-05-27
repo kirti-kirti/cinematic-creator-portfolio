@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Star, MessageSquare } from 'lucide-react';
+import { apiUrl } from '../api.js';
 
 export default function Testimonials() {
   const [testimonials, setTestimonials] = useState([]);
@@ -9,7 +10,7 @@ export default function Testimonials() {
   useEffect(() => {
     async function loadTestimonials() {
       try {
-        const res = await fetch('/api/testimonials');
+        const res = await fetch(apiUrl('/api/testimonials'));
         if (res.ok) {
           const data = await res.json();
           setTestimonials(data);

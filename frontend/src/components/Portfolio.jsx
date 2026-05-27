@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, Image, Layers, Eye, X, SlidersHorizontal, ArrowLeftRight } from 'lucide-react';
+import { apiUrl } from '../api.js';
 
 // Auto-convert any YouTube URL to youtube-nocookie embed
 const toYouTubeEmbed = (url) => {
@@ -99,7 +100,7 @@ export default function Portfolio() {
   useEffect(() => {
     async function loadPortfolio() {
       try {
-        const res = await fetch('/api/portfolio');
+        const res = await fetch(apiUrl('/api/portfolio'));
         if (!res.ok) throw new Error('Failed to load portfolio items');
         const data = await res.ok ? await res.json() : [];
         setItems(data);

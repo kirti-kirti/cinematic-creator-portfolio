@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import * as Icons from 'lucide-react';
+import { apiUrl } from '../api.js';
 
 export default function Services() {
   const [services, setServices] = useState([]);
@@ -9,7 +10,7 @@ export default function Services() {
   useEffect(() => {
     async function loadServices() {
       try {
-        const res = await fetch('/api/services');
+        const res = await fetch(apiUrl('/api/services'));
         if (res.ok) {
           const data = await res.json();
           setServices(data);

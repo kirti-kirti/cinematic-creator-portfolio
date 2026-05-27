@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { apiUrl } from '../api.js';
 import { 
   Lock, LayoutDashboard, FolderOpen, Mail, SlidersHorizontal, 
   Trash2, Eye, EyeOff, Check, Plus, AlertCircle, TrendingUp, DollarSign, Upload, Info 
@@ -94,7 +95,7 @@ export default function AdminDashboard() {
     e.preventDefault();
     setAuthError('');
     try {
-      const res = await fetch('/api/auth/login', {
+      const res = await fetch(apiUrl('/api/auth/login'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ passcode })
@@ -124,21 +125,21 @@ export default function AdminDashboard() {
     const headers = { 'Authorization': `Bearer ${authToken}` };
     try {
       // Fetch stats
-      const statsRes = await fetch('/api/stats', { headers });
+      const statsRes = await fetch(apiUrl('/api/stats'), { headers });
       if (statsRes.ok) {
         const statsData = await statsRes.json();
         setStats(statsData);
       }
 
       // Fetch inquiries
-      const inqRes = await fetch('/api/inquiries', { headers });
+      const inqRes = await fetch(apiUrl('/api/inquiries'), { headers });
       if (inqRes.ok) {
         const inqData = await inqRes.json();
         setInquiries(inqData);
       }
 
       // Fetch portfolio
-      const portRes = await fetch('/api/portfolio');
+      const portRes = await fetch(apiUrl('/api/portfolio'));
       if (portRes.ok) {
         const portData = await portRes.json();
         setPortfolio(portData);
@@ -158,7 +159,7 @@ export default function AdminDashboard() {
     formData.append('file', file);
 
     try {
-      const res = await fetch('/api/upload', {
+      const res = await fetch(apiUrl('/api/upload'), {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -192,7 +193,7 @@ export default function AdminDashboard() {
     };
     const newStatus = currentStatus === 'unread' ? 'read' : 'unread';
     try {
-      const res = await fetch(`/api/inquiries/${id}`, {
+      const res = await fetch(apiUrl(`/api/inquiries/${id}`), {
         method: 'PUT',
         headers,
         body: JSON.stringify({ status: newStatus })
@@ -210,7 +211,7 @@ export default function AdminDashboard() {
     if (!window.confirm('Are you sure you want to delete this client inquiry?')) return;
     const headers = { 'Authorization': `Bearer ${token}` };
     try {
-      const res = await fetch(`/api/inquiries/${id}`, {
+      const res = await fetch(apiUrl(`/api/inquiries/${id}`), {
         method: 'DELETE',
         headers
       });
@@ -294,7 +295,7 @@ export default function AdminDashboard() {
     }
 
     try {
-      const res = await fetch('/api/portfolio', {
+      const res = await fetch(apiUrl('/api/portfolio'), {
         method: 'POST',
         headers,
         body: JSON.stringify(payload)
@@ -317,7 +318,7 @@ export default function AdminDashboard() {
     if (!window.confirm('Delete this portfolio item forever?')) return;
     const headers = { 'Authorization': `Bearer ${token}` };
     try {
-      const res = await fetch(`/api/portfolio/${id}`, {
+      const res = await fetch(apiUrl(`/api/portfolio/${id}`), {
         method: 'DELETE',
         headers
       });
@@ -1025,7 +1026,7 @@ export default function AdminDashboard() {
                         const formData = new FormData();
                         formData.append('file', file);
                         try {
-                          const res = await fetch('/api/upload', {
+                          const res = await fetch(apiUrl('/api/upload'), {
                             method: 'POST',
                             headers: { 'Authorization': `Bearer ${token}` },
                             body: formData
